@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCR | Fauzann</title>
+
+    <!-- Tailwind CSS -->
+    <link href="./css/output.css" rel="stylesheet" />
+
+    <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="min-h-full mx-auto">
+      <!-- Nav Hero -->
+      <div class="bg-lavender">
+        <!-- Header Nav -->
+        <nav
+          class="w-full flex justify-center bg-lavender start-0 top-0 z-50 fixed"
+        >
+          <div class="container md:w-3/4 w-11/12">
+            <div class="my-8 flex h-9 items-center justify-between py-4">
+              <a href="/">
+                <div class="w-[100px] h-9 bg-darkblue"></div>
+              </a>
+              <div
+                class="hidden items-center space-x-0 md:flex md:space-x-4 lg:space-x-8"
+              >
+                <ul class="flex space-x-0 md:space-x-4 lg:space-x-8">
+                  <li>
+                    <a href="#our-services" class="">Our Services</a>
+                  </li>
+                  <li>
+                    <a href="#why-us" class="">Why Us</a>
+                  </li>
+                  <li>
+                    <a href="#testimonial" class="">Testimonial</a>
+                  </li>
+                  <li>
+                    <a href="#faq" class="">FAQ</a>
+                  </li>
+                </ul>
+                <button type="button">
+                  <div class="bg-limegreen rounded-md px-3 py-2 text-white">
+                    Register
+                  </div>
+                </button>
+              </div>
+              <div class="toggler md:hidden">
+                <button type="button">
+                  <i data-feather="menu"></i>
+                </button>
+              </div>
+              <aside
+                id="offcanvas"
+                class="fixed inset-y-0 right-0 bg-white w-1/2 p-4 z-10 hidden lg:hidden"
+              >
+                <nav>
+                  <div class="flex justify-between items-center p-4">
+                    <div class=""></div>
+                    <div class="leading-none toggler">
+                      <button type="button" class="text-gray-500">
+                        <i data-feather="x"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <ul
+                    class="flex flex-col justify-center items-start gap-8 text-sm font-semibold text-neutral-04 mt-2"
+                  >
+                    <li class="nav-item">
+                      <a href="#our-services">Our Services</a>
+                    </li>
+                    <li class="nav-item"><a href="#why-us">Why Us</a></li>
+                    <li class="nav-item">
+                      <a href="#testimonial">Testimonial</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#faq">FAQ</a>
+                    </li>
+                  </ul>
+                  <div class="flex justify-center items-center mt-8">
+                    <button type="button" class="w-full mx-auto">
+                      <div class="bg-limegreen rounded-md px-3 py-2 text-white">
+                        Register
+                      </div>
+                    </button>
+                  </div>
+                </nav>
+              </aside>
+              <div
+                id="overlay"
+                class="fixed inset-0 bg-black opacity-40 hidden lg:hidden"
+              ></div>
+            </div>
+          </div>
+        </nav>
+        <!-- End Header Nav -->
+
+        <!-- Hero section -->
+        <section id="hero" class="pt-10 md:pt-0">
+          <div class="relative pt-20 md:h-[500px]">
+            <div class="w-full h-full flex items-center justify-center">
+              <div class="container w-11/12 md:w-3/4">
+                <div class="space-y-4 pr-4 md:w-1/2">
+                  <h1
+                    class="text-4xl font-bold md:w-full w-[90%] leading-relaxed"
+                  >
+                    Sewa & Rental Mobil Terbaik di kawasan Bandung
+                  </h1>
+                  <p class="md:w-[90%]">
+                    Selamat datang di Binar Car Rental. Kami menyediakan mobil
+                    kualitas terbaik dengan harga terjangkau. Selalu siap
+                    melayani kebutuhanmu untuk sewa mobil selama 24 jam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="md:absolute md:flex" style="bottom: 0; right: 0">
+              <div class="ml-[16px] md:ml-0 pt-[48px] md:pt-0">
+                <img src="./images/assets/img_car.png" alt="Car" class="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Hero section -->
+      </div>
+      <!-- End Nav Hero -->
+
+      <section id="searchCar" class="relative mb-96 lg:mb-20">
+        <div
+          class="absolute top-0 left-0 right-0 px-6 mx-auto mt-[-50px] lg:w-[1047px] lg:px-0"
+        >
+          <div
+            class="flex flex-col lg:flex-row lg:items-center lg:justify-between bg-white rounded-lg shadow-md p-6"
+          >
+            <div class="mb-4 lg:mb-0">
+              <p class="font-light text-sm mb-2">Tipe Driver</p>
+              <select
+                name="driver-type"
+                id="driver-type"
+                class="text-neutral-03 border border-gray-300 rounded-sm w-full md:w-52 h-9 mt-2 px-2"
+              >
+                <option value="" disabled>Pilih Tipe Driver</option>
+                <option value="with-driver">Dengan Sopir</option>
+                <option value="without-driver selected">
+                  Tanpa Sopir (Lepas Kunci)
+                </option>
+              </select>
+            </div>
+            <div class="mb-4 lg:mb-0">
+              <p class="font-light text-sm mb-2">Tanggal</p>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                class="text-neutral-03 border border-gray-300 rounded-sm w-full md:w-52 h-9 px-2"
+              />
+            </div>
+            <div class="mb-4 lg:mb-0">
+              <p class="font-light text-sm mb-2">Waktu Jemput/Ambil</p>
+              <select
+                name="pickup-time"
+                id="pickup-time"
+                class="text-neutral-03 border border-gray-300 rounded-sm w-full md:w-52 h-9 px-2"
+              >
+                <option value="" disabled selected>Pilih Waktu</option>
+                <option value="08:00:00">08.00 WIB</option>
+                <option value="09:00:00">09.00 WIB</option>
+                <option value="10:00:00">10.00 WIB</option>
+                <option value="11:00:00">11.00 WIB</option>
+                <option value="12:00:00">12.00 WIB</option>
+              </select>
+            </div>
+            <div class="mb-4 lg:mb-0">
+              <p class="font-light text-sm mb-2">Jumlah Penumpang</p>
+              <div class="relative">
+                <input
+                  type="number"
+                  id="total-passenger"
+                  name="total-passenger"
+                  class="text-neutral-03 border border-gray-300 rounded-sm w-full md:w-52 h-9 px-2"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="font-light text-sm mb-6"></p>
+              <button
+                id="search-btn"
+                class="bg-green-500 h-9 hover:bg-green-600 text-white rounded px-4"
+                type="submit"
+              >
+                Cari Mobil
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="flex items-center justify-center">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4"
+          id="cars-container"
+        ></div>
+      </div>
+
+      <div
+        class="flex items-center justify-center"
+        id="notfound-container"
+      ></div>
+
+      <!-- Footer -->
+      <footer class="mt-[60px] mb-[100px] md:mt-[150px]">
+        <div class="flex h-full w-full items-center justify-center">
+          <div
+            class="container md:w-3/4 w-11/12 md:flex block justify-between md:space-y-0 space-y-4"
+          >
+            <div class="w-full md:w-1/4">
+              <div class="space-y-4">
+                <p class="text-sm font-light text-black w-[80%] md:w-full">
+                  Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
+                </p>
+                <p class="text-sm font-light text-black">
+                  binarcarrental@gmail.com
+                </p>
+                <p class="text-sm font-light text-black">081-233-334-808</p>
+              </div>
+            </div>
+            <div class="min-w-fit">
+              <div class="space-y-4 flex flex-col">
+                <a href="#our-services" class="text-sm font-medium text-black"
+                  >Our Services</a
+                >
+                <a href="#why-us" class="text-sm font-medium text-black"
+                  >Why Us</a
+                >
+                <a href="#testimonial" class="text-sm font-medium text-black"
+                  >Testimonial</a
+                >
+                <a href="#faq" class="text-sm font-medium text-black">FAQ</a>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4">
+              <div class="space-y-4">
+                <p class="text-sm font-light text-black">Connect with us</p>
+                <div class="flex justify-start gap-4">
+                  <a href="https://www.facebook.com" target="_blank">
+                    <i
+                      data-feather="facebook"
+                      class="w-[32px] h-[32px] bg-darkblue rounded-full text-white p-[5px] stroke-1"
+                    ></i>
+                  </a>
+                  <a href="https://www.instagram.com" target="_blank">
+                    <i
+                      data-feather="instagram"
+                      class="w-[32px] h-[32px] bg-darkblue rounded-full text-white p-[5px] stroke-1"
+                    ></i>
+                  </a>
+                  <a href="https://www.twitter.com" target="_blank">
+                    <i
+                      data-feather="twitter"
+                      class="w-[32px] h-[32px] bg-darkblue rounded-full text-white p-[5px] stroke-1"
+                    ></i>
+                  </a>
+                  <a href="mailto:example@example.com" target="_blank">
+                    <i
+                      data-feather="mail"
+                      class="w-[32px] h-[32px] bg-darkblue rounded-full text-white p-[5px] stroke-1"
+                    ></i>
+                  </a>
+                  <a href="https://www.twitch.tv" target="_blank">
+                    <i
+                      data-feather="twitch"
+                      class="w-[32px] h-[32px] bg-darkblue rounded-full text-white p-[5px] stroke-1"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/4">
+              <div class="space-y-4">
+                <p class="text-sm text-black font-light">
+                  Copyright Binar 2022
+                </p>
+                <div class="w-[100px] h-9 bg-darkblue"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </div>
+
+    <!-- Script JQuerry & Owl Carousel -->
+    <script src="./vendor/jquery/dist/jquery.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!-- Script JS -->
+    <script>
+      // feather icons
+      feather.replace();
+
+      // Navbar toggler
+      let navToggler = document.getElementsByClassName("toggler");
+
+      for (let i = 0; i < navToggler.length; i++) {
+        navToggler[i].addEventListener("click", function () {
+          document.getElementById("offcanvas").classList.toggle("hidden");
+          document.getElementById("overlay").classList.toggle("hidden");
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/car.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
+  </body>
+</html>
